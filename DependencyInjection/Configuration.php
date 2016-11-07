@@ -25,7 +25,7 @@ class Configuration implements ConfigurationInterface
                             ->useAttributeAsKey('key')
                             ->prototype('array')
                                 ->children()
-                                    ->booleanNode('create')->cannotBeEmpty()->defaultFalse()->info('Generate template caches into the new module. If not, generate into existed one.')->end()
+                                    ->booleanNode('create')->defaultFalse()->info('Generate template caches into the new module. If not, generate into existed one.')->end()
                                     ->scalarNode('name')->defaultNull()->end()
                                     ->arrayNode('targets')
                                         ->beforeNormalization()
